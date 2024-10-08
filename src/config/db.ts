@@ -2,7 +2,7 @@ import { Sequelize } from "sequelize-typescript";
 import dotenv from "dotenv";
 dotenv.config();
 
-import Product from "../models/Product.model";
+import Product from "../models/Product.model.js";
 
 // const dirname = process.cwd();
 
