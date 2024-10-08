@@ -29,18 +29,17 @@ connectDB();
 const server = express();
 
 //CORS
-server.use(cors());
-// const corsOptions : CorsOptions = {
-//    origin: (origin, callback) => {{
-//       if (origin === process.env.FRONTEND_URL) {
-//          callback(null, true)
-//       } else {
-//          callback(new Error('No permitido por CORS'))
-//       }
-//    }},
-// }
+const corsOptions : CorsOptions = {
+   origin: (origin, callback) => {{
+      if (origin === process.env.FRONTEND_URL) {
+         callback(null, true)
+      } else {
+         callback(new Error('No permitido por CORS'))
+      }
+   }},
+}
 
-// server.use(cors(corsOptions));
+server.use(cors(corsOptions));
 
 //Leer datos de formularios
 server.use(express.json());
