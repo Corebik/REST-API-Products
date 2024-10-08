@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { createProduct, deleteProduct, getProductById, getProducts, updateAvailability, updateProductPut } from "./controllers/productController.ts";
+import { createProduct, deleteProduct, getProductById, getProducts, updateAvailability, updateProductPut } from "./controllers/productController";
 
 import { body, param } from "express-validator";
-import { handleInputErrors } from "./middlewares/handleInputErrors.ts";
+import { handleInputErrors } from "./middlewares/handleInputErrors";
 
 const router = Router();
 

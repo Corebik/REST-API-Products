@@ -1,13 +1,13 @@
 import express from "express";
-import router from "./router.ts";
-import db from "./config/db.ts";
+import router from "./router";
+import db from "./config/db";
 import colors from "colors";
 import cors, { CorsOptions } from "cors";
 import morgan from "morgan";
 
 //Swagger
 import swaggerUi from "swagger-ui-express";
-import swaggerSpec, { swaggertUiOptions } from "./config/swagger.ts";
+import swaggerSpec, { swaggertUiOptions } from "./config/swagger";
 
 //Conectar a base de datos
 export const connectDB = async () => {
